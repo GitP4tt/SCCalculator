@@ -212,6 +212,9 @@
                                                 <state key="normal" title="🥤">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygk-BO-3h9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue3-I9-w5j">
                                                 <rect key="frame" x="248.5" y="0.0" width="122.5" height="99.5"/>
@@ -220,6 +223,9 @@
                                                 <state key="normal" title="=">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="zeigeZwischenstand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SrF-SA-Dm8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -236,7 +242,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="bestellungen" destination="VU6-Mo-YBz" id="o5g-Yi-i0O"/>
+                        <outlet property="bestellungenLabel" destination="VU6-Mo-YBz" id="o5g-Yi-i0O"/>
                         <outlet property="calculatorLabel" destination="57N-yF-7DU" id="ioj-IQ-zUG"/>
                         <outlet property="mulitplierView" destination="sPf-d2-6oW" id="XnF-QP-9wH"/>
                     </connections>

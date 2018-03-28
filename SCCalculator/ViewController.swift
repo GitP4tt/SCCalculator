@@ -10,56 +10,63 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var mulitplierView: UIStackView!
-    var currentPrice = 0.0
-    var currentMultiplier = 1
-    @IBOutlet weak var calculatorLabel: UILabel!
-    @IBOutlet weak var bestellungen: UILabel!
+    var auswahlAnzahl = 1
+    var spieltag = Spieltag()
+    var bestellung = Bestellung()
     
-    var pricelist = ["Bier": 5.2,
-                            "Soft": 4.4,
-                            "Glueh": 4.4,
-                            "Kaffee": 2,
-                            "Tee": 3,
-                            "Wein": 4.4,
-                            "Wurst": 2.8,
-                            "Merquez": 3.4]
+    @IBOutlet weak var calculatorLabel: UILabel!
+    @IBOutlet weak var bestellungenLabel: UILabel!
+    @IBOutlet weak var mulitplierView: UIStackView!
+
+    
 
    
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-        let product = sender.currentTitle!
-        let positionPrice = Double(currentMultiplier)*pricelist[product]!
-        let position = (String(currentMultiplier) + " x " + String(product) + " = " + String(positionPrice))
-
-       currentPrice = currentPrice + positionPrice
         
         
-        calculatorLabel.text = String(currentPrice)
-        bestellungen.text = (bestellungen.text! + "\n" + position)
-
+        
+        let produkt = Produkt(productName: sender.currentTitle!)
+        let position = Position(produkt: produkt, anzahl: auswahlAnzahl)
+        bestellung.hinzufuegen(position)
+        
+        updateViewFromModel()
+        
         mulitplierView.isUserInteractionEnabled = true
-        
-    
-        
-        currentMultiplier = 1
+        auswahlAnzahl = 1
         
     }
-    
+    func updateViewFromModel() {
+        calculatorLabel.text = String(bestellung.bestellwert)
+        var newLabelText: String?
+        for bestellPosition in bestellung.positionen {
+             newLabelText = bestellungenLabel.text! + "\n"  + bestellPosition.description
+        }
+        bestellungenLabel.text = newLabelText ?? ""
+
+    }
     @IBAction func multiplierChanged(_ sender: UIButton) {
         mulitplierView.isUserInteractionEnabled = false
-        let  multiplier = sender.currentTitle!
-        currentMultiplier = Int(multiplier)!
+        let multiplier = sender.currentTitle!
+        auswahlAnzahl = Int(multiplier)!
     }
     
     
-    @IBAction func reset(_ sender: Any) {
-        
-        currentPrice = 0
+    @IBAction func zeigeZwischenstand(_ sender: Any) {
+        resetAnzeige()
+        calculatorLabel.text = String(spieltag.umsatz)
+    }
+    
+    func resetAnzeige() {
         mulitplierView.isUserInteractionEnabled = true
-        calculatorLabel.text = String(currentPrice)
-        bestellungen.text = ""
+        spieltag.hinzufuegen(neue: bestellung)
+        bestellung = Bestellung()
+        updateViewFromModel()
 
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        resetAnzeige()
     }
     
     

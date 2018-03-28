@@ -11,17 +11,19 @@ import Foundation
 struct Position {
     
     private(set) var produkt: Produkt?
-    private(set) var anzahl = 1.0
+    private(set) var anzahl = 1
     
-    private(set) var positionsWert: Double {
+    var positionsWert: Double {
         get{
-            return (produkt!.preis * anzahl)
+            return (produkt!.preis * Double(anzahl))
         }
     }
     
     init(produkt: Produkt,anzahl: Int ) {
         self.produkt = produkt
-        self.anzahl = Double(anzahl)
+        self.anzahl = anzahl
     }
+    
+    public var description: String { return "\(anzahl) x \(produkt!.name) = \(positionsWert)" }
     
 }

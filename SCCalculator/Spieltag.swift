@@ -10,6 +10,15 @@ import Foundation
 
 class Spieltag {
     private(set) var bestellListe = Array<Bestellung>()
+    var umsatz: Double {
+        get{
+            var umsatz: Double = 0.0
+            for dieBestellung in bestellListe {
+                umsatz += dieBestellung.bestellwert
+            }
+            return umsatz
+        }
+    }
     
     func hinzufuegen(neue bestellung:Bestellung) {
         bestellListe.append(bestellung)
