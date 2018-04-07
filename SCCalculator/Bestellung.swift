@@ -8,7 +8,19 @@
 
 import Foundation
 
-class Bestellung{
+class Bestellung: Comparable{
+    static func < (lhs: Bestellung, rhs: Bestellung) -> Bool {
+        if (lhs.bestellwert > rhs.bestellwert){
+            return true
+        }
+        return false
+    }
+    
+    static func == (lhs: Bestellung, rhs: Bestellung) -> Bool {
+        if (lhs == rhs) {return true}
+        else            {return false}
+    }
+    
     private(set) var bestellwert = 0.0
     private(set) var positionen = Array<Position>()
     

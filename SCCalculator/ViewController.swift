@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     @IBAction func zeigeZwischenstand(_ sender: Any) {
         resetAnzeige()
         calculatorLabel.text = String(spieltag.umsatz)
+        bestellungenLabel.text = String("Anzahl Bestellungen: " + String(spieltag.bestellListe.count) + "\n" + spieltag.getStatistics())
     }
     
     func resetAnzeige() {

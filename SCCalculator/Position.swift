@@ -19,6 +19,8 @@ struct Position {
         }
     }
     
+    
+    
     init(produkt: Produkt,anzahl: Int ) {
         self.produkt = produkt
         self.anzahl = anzahl

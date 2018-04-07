@@ -28,5 +28,10 @@ class Spieltag {
         return bestellListe.last ?? Bestellung()
     }
     
-    
+    func getStatistics() -> String {
+        bestellListe.sort()
+        let maxBestellwert = bestellListe.first?.bestellwert ?? 0
+        
+        return "Max Bestellwert: " + String(maxBestellwert)
+    }
 }
