@@ -30,8 +30,15 @@ class Spieltag {
     
     func getStatistics() -> String {
         bestellListe.sort()
-        let maxBestellwert = bestellListe.first?.bestellwert ?? 0
         
-        return "Max Bestellwert: " + String(maxBestellwert)
+        var sum = 0.0;
+        for bestellung:Bestellung in bestellListe {
+            sum += bestellung.bestellwert
+        }
+        
+        let maxBestellwert = bestellListe.first?.bestellwert ?? 0
+        let durchschnittlicherBestellwert = sum / Double(bestellListe.count)
+        return "Max Bestellwert: " + String(maxBestellwert) + "\n" +
+            "Ø Bestellwert: " + String(durchschnittlicherBestellwert)
     }
 }
