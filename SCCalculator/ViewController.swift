@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     var auswahlAnzahl = 1
     var spieltag = Spieltag()
     var bestellung = Bestellung()
+    var resultDisplayed = false ;
     
     @IBOutlet weak var calculatorLabel: UILabel!
-    @IBOutlet weak var bestellungenLabel: UILabel!
+    @IBOutlet weak var bestellungenLabel: UITextView!
     @IBOutlet weak var mulitplierView: UIStackView!
 
     
@@ -24,10 +25,14 @@ class ViewController: UIViewController {
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         
-        
+        if resultDisplayed {
+            resetAnzeige()
+            resultDisplayed = false
+        }
         
         let produkt = Produkt(productName: sender.currentTitle!)
         let position = Position(produkt: produkt, anzahl: auswahlAnzahl)
+        
         bestellung.hinzufuegen(position)
         
         updateViewFromModel()
@@ -53,6 +58,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func zeigeZwischenstand(_ sender: Any) {
+        resultDisplayed = true
         resetAnzeige()
         calculatorLabel.text = String(spieltag.umsatz)
         bestellungenLabel.text = String("Anzahl Bestellungen: " + String(spieltag.bestellListe.count) + "\n" + spieltag.getStatistics())
