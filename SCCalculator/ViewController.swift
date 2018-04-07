@@ -30,6 +30,7 @@ class ViewController: UIViewController {
             resultDisplayed = false
         }
         
+        
         let produkt = Produkt(productName: sender.currentTitle!)
         let position = Position(produkt: produkt, anzahl: auswahlAnzahl)
         
@@ -66,7 +67,11 @@ class ViewController: UIViewController {
     
     func resetAnzeige() {
         mulitplierView.isUserInteractionEnabled = true
-        spieltag.hinzufuegen(neue: bestellung)
+        
+        if (bestellung.positionen.count>0){
+            spieltag.hinzufuegen(neue: bestellung)
+            
+        }
         bestellung = Bestellung()
         updateViewFromModel()
 
