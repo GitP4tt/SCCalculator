@@ -18,7 +18,6 @@
 		FC73453C206C42B000C7E1BC /* Bestellung.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453B206C42B000C7E1BC /* Bestellung.swift */; };
 		FC73453E206C450500C7E1BC /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453D206C450500C7E1BC /* Position.swift */; };
 		FC734540206C45AE00C7E1BC /* Produkt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453F206C45AE00C7E1BC /* Produkt.swift */; };
-		FC7C59F020825D1B000E26A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC7C59EF20825D1B000E26A6 /* Info.plist */; };
 		FC965B5E208222830084807B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC965B5D208222830084807B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -275,7 +274,6 @@
 				FC3B4D43205BEF6900A16248 /* LaunchScreen.storyboard in Resources */,
 				FC965B5E208222830084807B /* Default-568h@2x.png in Resources */,
 				FC3B4D40205BEF6900A16248 /* Assets.xcassets in Resources */,
-				FC7C59F020825D1B000E26A6 /* Info.plist in Resources */,
 				FC3B4D3E205BEF6900A16248 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

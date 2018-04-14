@@ -41,7 +41,7 @@ class Spieltag {
     
     private var bestSeller: (key: String, value: Int){
         get{
-            return Position.productCount.max { a, b in a.value < b.value }!
+            return Produkt.productCount.max { a, b in a.value < b.value }!
         }
     }
     

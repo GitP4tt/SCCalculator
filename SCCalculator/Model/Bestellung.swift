@@ -40,7 +40,7 @@ class Bestellung: Comparable{
         if(positionen.count == 0) {
             bestellwert = 0
         }
-        Position.productCount[lastPosition.produkt!.name]! -= lastPosition.anzahl * 1
+        Produkt.productCount[lastPosition.produkt!.name]! -= lastPosition.anzahl * 1
         
         elementCount -= 1
     }

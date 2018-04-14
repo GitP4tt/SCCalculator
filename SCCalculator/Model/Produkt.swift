@@ -23,6 +23,25 @@ struct Produkt {
         self.name = productName
         
     }
+    public static var productCount = ["Bier": 0,
+                                      "Radler": 0,
+                                      "Cola": 0,
+                                      "Fanta": 0,
+                                      "Sprite": 0,
+                                      "Wasser": 0,
+                                      "Mezzo": 0,
+                                      "Apfel": 0,
+                                      "Glueh": 0,
+                                      "Kaffee": 0,
+                                      "Tee": 0,
+                                      "Wein": 0,
+                                      "Sauer": 0,
+                                      "Kaese": 0,
+                                      "Merquez": 0,
+                                      "Schorle": 0,
+                                      "Rote": 0,
+                                      "🥨": 0,
+                                      "🥤": 0]
     
     static var pricelist = ["Bier": 5.2,
                      "Radler": 5.2,
