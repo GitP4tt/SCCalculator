@@ -18,6 +18,7 @@
 		FC73453C206C42B000C7E1BC /* Bestellung.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453B206C42B000C7E1BC /* Bestellung.swift */; };
 		FC73453E206C450500C7E1BC /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453D206C450500C7E1BC /* Position.swift */; };
 		FC734540206C45AE00C7E1BC /* Produkt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453F206C45AE00C7E1BC /* Produkt.swift */; };
+		FC7C59F020825D1B000E26A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC7C59EF20825D1B000E26A6 /* Info.plist */; };
 		FC965B5E208222830084807B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC965B5D208222830084807B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +46,6 @@
 		FC3B4D3D205BEF6900A16248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3B4D3F205BEF6900A16248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3B4D42205BEF6900A16248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FC3B4D44205BEF6900A16248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3B4D49205BEF6900A16248 /* SCCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B4D4D205BEF6900A16248 /* SCCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCalculatorTests.swift; sourceTree = "<group>"; };
 		FC3B4D4F205BEF6900A16248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		FC73453B206C42B000C7E1BC /* Bestellung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bestellung.swift; sourceTree = "<group>"; };
 		FC73453D206C450500C7E1BC /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		FC73453F206C45AE00C7E1BC /* Produkt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produkt.swift; sourceTree = "<group>"; };
+		FC7C59EF20825D1B000E26A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC965B5D208222830084807B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,11 +109,10 @@
 		FC3B4D37205BEF6900A16248 /* SCCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				FC3B4D44205BEF6900A16248 /* Info.plist */,
+				FC7C59EF20825D1B000E26A6 /* Info.plist */,
 				FC3B4D41205BEF6900A16248 /* LaunchScreen.storyboard */,
 				FC3B4D3F205BEF6900A16248 /* Assets.xcassets */,
 				FC3B4D38205BEF6900A16248 /* AppDelegate.swift */,
-				FCB6DD3F2082168500EF98BA /* Helper */,
 				FCB6DD3D2082166600EF98BA /* Controller */,
 				FCB6DD40208216AE00EF98BA /* View */,
 				FCB6DD3C2082163800EF98BA /* Model */,
@@ -155,13 +155,6 @@
 				FC3B4D3A205BEF6900A16248 /* ViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FCB6DD3F2082168500EF98BA /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		FCB6DD40208216AE00EF98BA /* View */ = {
@@ -282,6 +275,7 @@
 				FC3B4D43205BEF6900A16248 /* LaunchScreen.storyboard in Resources */,
 				FC965B5E208222830084807B /* Default-568h@2x.png in Resources */,
 				FC3B4D40205BEF6900A16248 /* Assets.xcassets in Resources */,
+				FC7C59F020825D1B000E26A6 /* Info.plist in Resources */,
 				FC3B4D3E205BEF6900A16248 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
