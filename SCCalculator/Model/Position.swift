@@ -46,7 +46,7 @@ class Position {
     init(produkt: Produkt,anzahl: Int ) {
         self.produkt = produkt
         self.anzahl = anzahl
-        Position.productCount[produkt.name]! += 1
+        Position.productCount[produkt.name]! +=  (1 * anzahl)
     }
     
     public var description: String { return "\(anzahl) x \(produkt!.name) = \(positionsWert)" }
