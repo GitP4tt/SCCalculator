@@ -27,7 +27,12 @@ struct Produkt {
     
     static var pricelist = ["Bier": 5.2,
                      "Radler": 5.2,
-                     "Soft": 4.4,
+                     "Cola": 4.4,
+                     "Fanta": 4.4,
+                     "Sprite": 4.4,
+                     "Wasser": 4.4,
+                     "Mezzo": 4.4,
+                     "Apfel": 4.4,
                      "Glueh": 4.4,
                      "Kaffee": 2,
                      "Tee": 3,

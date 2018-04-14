@@ -14,7 +14,12 @@ class Position {
     private(set) var anzahl = 1
     public static var productCount = ["Bier": 0,
                     "Radler": 0,
-                    "Soft": 0,
+                    "Cola": 0,
+                    "Fanta": 0,
+                    "Sprite": 0,
+                    "Wasser": 0,
+                    "Mezzo": 0,
+                    "Apfel": 0,
                     "Glueh": 0,
                     "Kaffee": 0,
                     "Tee": 0,
