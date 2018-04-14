@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var auswahlAnzahl = 1
+    var multiplier = 1
     var spieltag = Spieltag()
     var bestellung = Bestellung()
     var resultDisplayed = false ;
@@ -32,21 +32,21 @@ class ViewController: UIViewController {
         
         
         let produkt = Produkt(productName: sender.currentTitle!)
-        let position = Position(produkt: produkt, anzahl: auswahlAnzahl)
+        let position = Position(produkt: produkt, anzahl: multiplier)
         
         bestellung.hinzufuegen(position)
         
         updateViewFromModel()
         
         mulitplierView.isUserInteractionEnabled = true
-        auswahlAnzahl = 1
+        multiplier = 1
         
     }
    
     @IBAction func multiplierChanged(_ sender: UIButton) {
         mulitplierView.isUserInteractionEnabled = false
         let multiplier = sender.currentTitle!
-        auswahlAnzahl = Int(multiplier)!
+        self.multiplier = Int(multiplier)!
     }
     
     
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         resultDisplayed = true
         resetAnzeige()
         calculatorLabel.text = String(spieltag.umsatz)
-        bestellungenLabel.text = String("Anzahl Bestellungen: " + String(spieltag.bestellListe.count) + "\n" + spieltag.getStatistics())
+        bestellungenLabel.text = String(spieltag.getStatistics())
     }
     
     func resetAnzeige() {
@@ -79,6 +79,8 @@ class ViewController: UIViewController {
             self.bestellung.deleteLast()
             self.updateViewFromModel()
         }
+        self.multiplier = 1
+        mulitplierView.isUserInteractionEnabled = true
     }
     
     override func viewDidLoad() {

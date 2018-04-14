@@ -56,13 +56,13 @@ class Spieltag {
     func getStatistics() -> String {
         bestellListe.sort()
 
-        
+        let orderCount = "Anzahl Bestellungen: " + String(self.bestellListe.count)
         let maxBestellwert = "Max Bestellwert: " + String(self.maxBestellwert!)
         let durchschnittlicherBestellwert = "Ø Bestellwert: " + String(self.averageOrderValue!)
-        let bestSeller = "Best Seller: " + self.bestSeller.key + "(x" + String(self.bestSeller.value) + ")"
+        let bestSeller = "Best Seller: " + self.bestSeller.key + " (x" + String(self.bestSeller.value) + ")"
         
         
-        let output = maxBestellwert + "\n" + durchschnittlicherBestellwert + "\n" + bestSeller
+        let output = orderCount + "\n" + maxBestellwert + "\n" + durchschnittlicherBestellwert + "\n" + bestSeller
         
         
         return output
