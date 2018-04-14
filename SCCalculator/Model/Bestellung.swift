@@ -9,6 +9,7 @@
 import Foundation
 
 class Bestellung: Comparable{
+    
     static func < (lhs: Bestellung, rhs: Bestellung) -> Bool {
         if (lhs.bestellwert > rhs.bestellwert){
             return true

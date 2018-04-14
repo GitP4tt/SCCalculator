@@ -10,11 +10,13 @@ import Foundation
 
 
 struct Produkt {
+    
     private(set) var name = String()
+    var soldUnits = 0 
     
     var preis: Double{
         get{
-            return pricelist[name]!
+            return Produkt.pricelist[name]!
         }
     }
     
@@ -23,7 +25,7 @@ struct Produkt {
         
     }
     
-    var pricelist = ["Bier": 5.2,
+    static var pricelist = ["Bier": 5.2,
                      "Radler": 5.2,
                      "Soft": 4.4,
                      "Glueh": 4.4,

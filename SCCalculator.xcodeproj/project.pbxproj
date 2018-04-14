@@ -18,6 +18,7 @@
 		FC73453C206C42B000C7E1BC /* Bestellung.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453B206C42B000C7E1BC /* Bestellung.swift */; };
 		FC73453E206C450500C7E1BC /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453D206C450500C7E1BC /* Position.swift */; };
 		FC734540206C45AE00C7E1BC /* Produkt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453F206C45AE00C7E1BC /* Produkt.swift */; };
+		FC965B5E208222830084807B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC965B5D208222830084807B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FC73453B206C42B000C7E1BC /* Bestellung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bestellung.swift; sourceTree = "<group>"; };
 		FC73453D206C450500C7E1BC /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		FC73453F206C45AE00C7E1BC /* Produkt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produkt.swift; sourceTree = "<group>"; };
+		FC965B5D208222830084807B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		FC3B4D2C205BEF6900A16248 = {
 			isa = PBXGroup;
 			children = (
+				FC965B5D208222830084807B /* Default-568h@2x.png */,
 				FC3B4D37205BEF6900A16248 /* SCCalculator */,
 				FC3B4D4C205BEF6900A16248 /* SCCalculatorTests */,
 				FC3B4D57205BEF6900A16248 /* SCCalculatorUITests */,
@@ -105,16 +108,14 @@
 		FC3B4D37205BEF6900A16248 /* SCCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				FC3B4D38205BEF6900A16248 /* AppDelegate.swift */,
-				FC3B4D3A205BEF6900A16248 /* ViewController.swift */,
-				FC3B4D3C205BEF6900A16248 /* Main.storyboard */,
-				FC3B4D3F205BEF6900A16248 /* Assets.xcassets */,
-				FC3B4D41205BEF6900A16248 /* LaunchScreen.storyboard */,
 				FC3B4D44205BEF6900A16248 /* Info.plist */,
-				FC734539206C427800C7E1BC /* Spieltag.swift */,
-				FC73453B206C42B000C7E1BC /* Bestellung.swift */,
-				FC73453D206C450500C7E1BC /* Position.swift */,
-				FC73453F206C45AE00C7E1BC /* Produkt.swift */,
+				FC3B4D41205BEF6900A16248 /* LaunchScreen.storyboard */,
+				FC3B4D3F205BEF6900A16248 /* Assets.xcassets */,
+				FC3B4D38205BEF6900A16248 /* AppDelegate.swift */,
+				FCB6DD3F2082168500EF98BA /* Helper */,
+				FCB6DD3D2082166600EF98BA /* Controller */,
+				FCB6DD40208216AE00EF98BA /* View */,
+				FCB6DD3C2082163800EF98BA /* Model */,
 			);
 			path = SCCalculator;
 			sourceTree = "<group>";
@@ -135,6 +136,40 @@
 				FC3B4D5A205BEF6900A16248 /* Info.plist */,
 			);
 			path = SCCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		FCB6DD3C2082163800EF98BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC734539206C427800C7E1BC /* Spieltag.swift */,
+				FC73453B206C42B000C7E1BC /* Bestellung.swift */,
+				FC73453D206C450500C7E1BC /* Position.swift */,
+				FC73453F206C45AE00C7E1BC /* Produkt.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCB6DD3D2082166600EF98BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B4D3A205BEF6900A16248 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCB6DD3F2082168500EF98BA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FCB6DD40208216AE00EF98BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B4D3C205BEF6900A16248 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3B4D43205BEF6900A16248 /* LaunchScreen.storyboard in Resources */,
+				FC965B5E208222830084807B /* Default-568h@2x.png in Resources */,
 				FC3B4D40205BEF6900A16248 /* Assets.xcassets in Resources */,
 				FC3B4D3E205BEF6900A16248 /* Main.storyboard in Resources */,
 			);
