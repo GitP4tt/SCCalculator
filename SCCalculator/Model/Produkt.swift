@@ -12,7 +12,6 @@ import Foundation
 struct Produkt {
     
     private(set) var name = String()
-    var soldUnits = 0 
     
     var preis: Double{
         get{

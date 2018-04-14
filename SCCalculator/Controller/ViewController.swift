@@ -42,15 +42,7 @@ class ViewController: UIViewController {
         auswahlAnzahl = 1
         
     }
-    func updateViewFromModel() {
-        calculatorLabel.text = String(bestellung.bestellwert)
-        var newLabelText: String?
-        for bestellPosition in bestellung.positionen {
-             newLabelText = bestellungenLabel.text! + "\n"  + bestellPosition.description
-        }
-        bestellungenLabel.text = newLabelText ?? ""
-
-    }
+   
     @IBAction func multiplierChanged(_ sender: UIButton) {
         mulitplierView.isUserInteractionEnabled = false
         let multiplier = sender.currentTitle!
@@ -82,7 +74,13 @@ class ViewController: UIViewController {
     }
     
     
-
+    @IBAction func deleteLastPosition(_ sender: UIButton) {
+        if(self.bestellung.elementCount > 0){
+            self.bestellung.deleteLast()
+            self.updateViewFromModel()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -93,7 +91,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func updateViewFromModel() {
+       
+        var newLabelText: String = ""
+        for bestellPosition in bestellung.positionen {
+            newLabelText += bestellPosition.description + "\n"
+        }
+        bestellungenLabel.text = newLabelText
+        calculatorLabel.text = String(bestellung.bestellwert)
+    }
    
 }
 

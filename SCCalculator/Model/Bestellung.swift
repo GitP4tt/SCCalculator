@@ -23,11 +23,25 @@ class Bestellung: Comparable{
     }
     
     private(set) var bestellwert = 0.0
+    var elementCount = 0
+    
     private(set) var positionen = Array<Position>()
     
     
     func hinzufuegen(_ position: Position){
         positionen.append(position)
         bestellwert += position.positionsWert
+        elementCount += 1
+    }
+    
+    func deleteLast(){
+        let lastPosition = positionen.popLast()!
+        bestellwert -= lastPosition.positionsWert
+        if(positionen.count == 0) {
+            bestellwert = 0
+        }
+        Position.productCount[lastPosition.produkt!.name]! -= lastPosition.anzahl * 1
+        
+        elementCount -= 1
     }
 }
