@@ -97,7 +97,7 @@ class ViewController: UIViewController {
        
         var newLabelText: String = ""
         for bestellPosition in bestellung.positionen {
-            newLabelText += bestellPosition.description + "\n"
+                newLabelText += bestellPosition.description
         }
         bestellungenLabel.text = newLabelText
         calculatorLabel.text = String(bestellung.bestellwert)
