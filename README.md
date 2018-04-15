@@ -8,7 +8,7 @@
 **SC-Calculator** makes cashier's life easier. 
 It's designed to help kiosk-cashier's  @schwarzwald-stadion in Freiburg im Breisgau.
 
-**Get insights** about sold units, revenue, best seller and average order total!
+**Get Matchday statistics** sold units, revenue, best seller and average order total
 **Let Sc Calculator do the math** so that you can focus on 🍻
 
 
