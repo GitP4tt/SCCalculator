@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     var multiplier = 1
-    var spieltag = Spieltag()
-    var bestellung = Bestellung()
+    var matchday = Matchday()
+    var currentOrder = Order()
     var resultDisplayed = false ;
     
     @IBOutlet weak var calculatorLabel: UILabel!
-    @IBOutlet weak var bestellungenLabel: UITextView!
+    @IBOutlet weak var orderLabel: UITextView!
     @IBOutlet weak var mulitplierView: UIStackView!
 
     
@@ -26,15 +26,15 @@ class ViewController: UIViewController {
     @IBAction func buttonClicked(_ sender: UIButton) {
         
         if resultDisplayed {
-            resetAnzeige()
+            resetUI()
             resultDisplayed = false
         }
         
         
-        let produkt = Produkt(productName: sender.currentTitle!)
-        let position = Position(produkt: produkt, anzahl: multiplier)
+        let newProduct = Product(productName: sender.currentTitle!)
+        let position = Position(product: newProduct, multiplier: multiplier)
         
-        bestellung.hinzufuegen(position)
+        currentOrder.add(new: position)
         
         updateViewFromModel()
         
@@ -50,33 +50,33 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func zeigeZwischenstand(_ sender: Any) {
+    @IBAction func showStatistics(_ sender: Any) {
         resultDisplayed = true
-        resetAnzeige()
-        calculatorLabel.text = String(spieltag.umsatz)
-        bestellungenLabel.text = String(spieltag.getStatistics())
+        resetUI()
+        calculatorLabel.text = String(matchday.umsatz)
+        orderLabel.text = String(matchday.getStatistics())
     }
     
-    func resetAnzeige() {
+    func resetUI() {
         mulitplierView.isUserInteractionEnabled = true
         
-        if (bestellung.positionen.count>0){
-            spieltag.hinzufuegen(neue: bestellung)
+        if (currentOrder.positions.count>0){
+            matchday.add(new: currentOrder)
             
         }
-        bestellung = Bestellung()
+        currentOrder = Order()
         updateViewFromModel()
 
     }
     
     @IBAction func reset(_ sender: Any) {
-        resetAnzeige()
+        resetUI()
     }
     
     
     @IBAction func deleteLastPosition(_ sender: UIButton) {
-        if(self.bestellung.elementCount > 0){
-            self.bestellung.deleteLast()
+        if(self.currentOrder.positions.count > 0){
+            self.currentOrder.deleteLast()
             self.updateViewFromModel()
         }
         self.multiplier = 1
@@ -96,11 +96,11 @@ class ViewController: UIViewController {
     func updateViewFromModel() {
        
         var newLabelText: String = ""
-        for bestellPosition in bestellung.positionen {
-                newLabelText += bestellPosition.description + "\n"
+        for position in currentOrder.positions {
+                newLabelText += position.description + "\n"
         }
-        bestellungenLabel.text = newLabelText
-        calculatorLabel.text = String(bestellung.bestellwert)
+        orderLabel.text = newLabelText
+        calculatorLabel.text = String(currentOrder.orderTotal)
     }
    
 }

@@ -342,7 +342,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="zeigeZwischenstand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SrF-SA-Dm8"/>
+                                                    <action selector="showStatistics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SrF-SA-Dm8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -360,9 +360,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="bestellungenLabel" destination="lrg-s7-XzJ" id="Erz-l6-1GF"/>
                         <outlet property="calculatorLabel" destination="57N-yF-7DU" id="ioj-IQ-zUG"/>
                         <outlet property="mulitplierView" destination="sPf-d2-6oW" id="XnF-QP-9wH"/>
+                        <outlet property="orderLabel" destination="lrg-s7-XzJ" id="Erz-l6-1GF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

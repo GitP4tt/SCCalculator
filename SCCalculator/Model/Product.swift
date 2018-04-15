@@ -9,13 +9,13 @@
 import Foundation
 
 
-struct Produkt {
+struct Product {
     
     private(set) var name = String()
     
     var preis: Double{
         get{
-            return Produkt.pricelist[name]!
+            return Product.pricelist[name]!
         }
     }
     

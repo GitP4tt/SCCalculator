@@ -10,14 +10,14 @@ import Foundation
 
 class Position {
     
-    private(set) var produkt: Produkt?
-    private(set) var anzahl = 1
+    private(set) var product: Product?
+    private(set) var multiplier = 1
    
     
  
-    var positionsWert: Double {
+    var positionValue: Double {
         get{
-            return (produkt!.preis * Double(anzahl))
+            return (product!.preis * Double(multiplier))
         }
     }
     
@@ -25,12 +25,12 @@ class Position {
     
     
     
-    init(produkt: Produkt,anzahl: Int ) {
-        self.produkt = produkt
-        self.anzahl = anzahl
-        Produkt.productCount[produkt.name]! +=  (1 * anzahl)
+    init(product: Product,multiplier: Int ) {
+        self.product = product
+        self.multiplier = multiplier
+        Product.productCount[product.name]! +=  (1 * multiplier)
     }
     
-    public var description: String { return "\(anzahl) x \(produkt!.name) = \(positionsWert)" }
+    public var description: String { return "\(multiplier) x \(product!.name) = \(positionValue)" }
     
 }
