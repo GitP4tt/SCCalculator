@@ -1,5 +1,3 @@
-# README #
-
 **Setup**
 - Download xCode 9
 - clone the project to your machine. 
