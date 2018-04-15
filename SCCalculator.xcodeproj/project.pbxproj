@@ -14,10 +14,10 @@
 		FC3B4D43205BEF6900A16248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B4D41205BEF6900A16248 /* LaunchScreen.storyboard */; };
 		FC3B4D4E205BEF6900A16248 /* SCCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B4D4D205BEF6900A16248 /* SCCalculatorTests.swift */; };
 		FC3B4D59205BEF6900A16248 /* SCCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B4D58205BEF6900A16248 /* SCCalculatorUITests.swift */; };
-		FC73453A206C427800C7E1BC /* Spieltag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC734539206C427800C7E1BC /* Spieltag.swift */; };
-		FC73453C206C42B000C7E1BC /* Bestellung.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453B206C42B000C7E1BC /* Bestellung.swift */; };
+		FC73453A206C427800C7E1BC /* Matchday.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC734539206C427800C7E1BC /* Matchday.swift */; };
+		FC73453C206C42B000C7E1BC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453B206C42B000C7E1BC /* Order.swift */; };
 		FC73453E206C450500C7E1BC /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453D206C450500C7E1BC /* Position.swift */; };
-		FC734540206C45AE00C7E1BC /* Produkt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453F206C45AE00C7E1BC /* Produkt.swift */; };
+		FC734540206C45AE00C7E1BC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453F206C45AE00C7E1BC /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		FC3B4D54205BEF6900A16248 /* SCCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B4D58205BEF6900A16248 /* SCCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCalculatorUITests.swift; sourceTree = "<group>"; };
 		FC3B4D5A205BEF6900A16248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC734539206C427800C7E1BC /* Spieltag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spieltag.swift; sourceTree = "<group>"; };
-		FC73453B206C42B000C7E1BC /* Bestellung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bestellung.swift; sourceTree = "<group>"; };
+		FC734539206C427800C7E1BC /* Matchday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchday.swift; sourceTree = "<group>"; };
+		FC73453B206C42B000C7E1BC /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		FC73453D206C450500C7E1BC /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
-		FC73453F206C45AE00C7E1BC /* Produkt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produkt.swift; sourceTree = "<group>"; };
+		FC73453F206C45AE00C7E1BC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FC7C59EF20825D1B000E26A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,10 +145,10 @@
 		FCB6DD3C2082163800EF98BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC734539206C427800C7E1BC /* Spieltag.swift */,
-				FC73453B206C42B000C7E1BC /* Bestellung.swift */,
+				FC734539206C427800C7E1BC /* Matchday.swift */,
+				FC73453B206C42B000C7E1BC /* Order.swift */,
 				FC73453D206C450500C7E1BC /* Position.swift */,
-				FC73453F206C45AE00C7E1BC /* Produkt.swift */,
+				FC73453F206C45AE00C7E1BC /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,12 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC73453C206C42B000C7E1BC /* Bestellung.swift in Sources */,
-				FC73453A206C427800C7E1BC /* Spieltag.swift in Sources */,
+				FC73453C206C42B000C7E1BC /* Order.swift in Sources */,
+				FC73453A206C427800C7E1BC /* Matchday.swift in Sources */,
 				FC3B4D3B205BEF6900A16248 /* ViewController.swift in Sources */,
 				FC73453E206C450500C7E1BC /* Position.swift in Sources */,
 				FC3B4D39205BEF6900A16248 /* AppDelegate.swift in Sources */,
-				FC734540206C45AE00C7E1BC /* Produkt.swift in Sources */,
+				FC734540206C45AE00C7E1BC /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
