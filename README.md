@@ -15,9 +15,9 @@ It's designed to help kiosk-cashier's  @schwarzwald-stadion in Freiburg im Breis
 
 
 
-![Alt text](http://i.imgur.com/1kVcjHL.png "Calculation scenario")
+![Alt text](https://i.imgur.com/rWg7i2Q.png "Calculation scenario")
 
-![Alt text](https://ibb.co/jR2D1n "Statistics scenario")
+![Alt text](https://i.imgur.com/NXFopHe.png "Statistics scenario")
 
 
 
