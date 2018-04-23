@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var currentOrder = Order()
     var resultDisplayed = false ;
     
+   
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var calculatorLabel: UILabel!
     @IBOutlet weak var orderLabel: UITextView!
     @IBOutlet weak var mulitplierView: UIStackView!
@@ -85,7 +87,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if self.revealViewController() != nil {
+            menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 
     override func didReceiveMemoryWarning() {
