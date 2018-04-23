@@ -213,7 +213,6 @@ typedef NS_ENUM(NSInteger, SWRevealToggleAnimationType)
 // The following methods are meant to be directly connected to the action method of a button
 // to perform user triggered postion change of the controller views. This is ussually added to a
 // button on top left or right of the frontViewController
-
 - (IBAction)revealToggle:(id)sender;
 - (IBAction)rightRevealToggle:(id)sender; // <-- simetric implementation of the above for the rightViewController
 
