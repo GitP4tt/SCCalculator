@@ -17,6 +17,7 @@
 		FC49A8BF208E72FD009BAE85 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49A8BE208E72FD009BAE85 /* OverviewController.swift */; };
 		FC59253B208E892400AE79C7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC592539208E892300AE79C7 /* SWRevealViewController.m */; };
 		FC59253D208E8D8500AE79C7 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC59253C208E8D8500AE79C7 /* SettingsController.swift */; };
+		FC59253F208FA13300AE79C7 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC59253E208FA13300AE79C7 /* ModelController.swift */; };
 		FC73453A206C427800C7E1BC /* Matchday.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC734539206C427800C7E1BC /* Matchday.swift */; };
 		FC73453C206C42B000C7E1BC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453B206C42B000C7E1BC /* Order.swift */; };
 		FC73453E206C450500C7E1BC /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73453D206C450500C7E1BC /* Position.swift */; };
@@ -58,6 +59,7 @@
 		FC592539208E892300AE79C7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FC59253A208E892300AE79C7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FC59253C208E8D8500AE79C7 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		FC59253E208FA13300AE79C7 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		FC734539206C427800C7E1BC /* Matchday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchday.swift; sourceTree = "<group>"; };
 		FC73453B206C42B000C7E1BC /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		FC73453D206C450500C7E1BC /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				FC3B4D3A205BEF6900A16248 /* ViewController.swift */,
 				FC49A8BE208E72FD009BAE85 /* OverviewController.swift */,
 				FC59253C208E8D8500AE79C7 /* SettingsController.swift */,
+				FC59253E208FA13300AE79C7 /* ModelController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC59253D208E8D8500AE79C7 /* SettingsController.swift in Sources */,
+				FC59253F208FA13300AE79C7 /* ModelController.swift in Sources */,
 				FC73453C206C42B000C7E1BC /* Order.swift in Sources */,
 				FC73453A206C427800C7E1BC /* Matchday.swift in Sources */,
 				FC3B4D3B205BEF6900A16248 /* ViewController.swift in Sources */,

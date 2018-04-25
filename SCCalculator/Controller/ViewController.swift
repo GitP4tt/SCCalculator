@@ -11,18 +11,23 @@ import UIKit
 class ViewController: UIViewController {
     
     var multiplier = 1
-    var matchday = Matchday()
-    var currentOrder = Order()
     var resultDisplayed = false ;
+  
     
    
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var calculatorLabel: UILabel!
     @IBOutlet weak var orderLabel: UITextView!
     @IBOutlet weak var mulitplierView: UIStackView!
-
     
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+            updateViewFromModel()
+       
+    }
    
     
     @IBAction func buttonClicked(_ sender: UIButton) {
@@ -36,7 +41,7 @@ class ViewController: UIViewController {
         let newProduct = Product(productName: sender.currentTitle!)
         let position = Position(product: newProduct, multiplier: multiplier)
         
-        currentOrder.add(new: position)
+        ModelController.currentOrder.add(new: position)
         
         updateViewFromModel()
         
@@ -55,18 +60,17 @@ class ViewController: UIViewController {
     @IBAction func showStatistics(_ sender: Any) {
         resultDisplayed = true
         resetUI()
-        calculatorLabel.text = String(matchday.umsatz)
-        orderLabel.text = String(matchday.getStatistics())
+        calculatorLabel.text = String(ModelController.matchday.umsatz)
+        orderLabel.text = String(ModelController.matchday.getStatistics())
     }
     
     func resetUI() {
         mulitplierView.isUserInteractionEnabled = true
         
-        if (currentOrder.positions.count>0){
-            matchday.add(new: currentOrder)
-            
+        if (ModelController.currentOrder.positions.count > 0){
+            ModelController.matchday.add(new: ModelController.currentOrder)
         }
-        currentOrder = Order()
+        ModelController.currentOrder = Order()
         updateViewFromModel()
 
     }
@@ -77,8 +81,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func deleteLastPosition(_ sender: UIButton) {
-        if(self.currentOrder.positions.count > 0){
-            self.currentOrder.deleteLast()
+        if  ModelController.currentOrder.positions.count > 0 {
+            ModelController.currentOrder.deleteLast()
             self.updateViewFromModel()
         }
         self.multiplier = 1
@@ -87,6 +91,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         if self.revealViewController() != nil {
             menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
             
@@ -102,12 +107,14 @@ class ViewController: UIViewController {
     func updateViewFromModel() {
        
         var newLabelText: String = ""
-        for position in currentOrder.positions {
-                newLabelText += position.description + "\n"
+        
+        for position in ModelController.currentOrder.positions {
+            newLabelText += position.description + "\n"
         }
+        
         orderLabel.text = newLabelText
-        calculatorLabel.text = String(currentOrder.orderTotal)
+        calculatorLabel.text = String(ModelController.currentOrder.orderTotal)
     }
-   
+  
 }
 
