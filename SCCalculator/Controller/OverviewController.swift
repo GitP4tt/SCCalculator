@@ -16,6 +16,8 @@ class OverviewController: UIViewController {
         if self.revealViewController() != nil {            
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        self.hideKeyboardWhenTappedAround()
+
     }
 
 

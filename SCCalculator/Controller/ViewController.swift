@@ -98,6 +98,8 @@ class ViewController: UIViewController {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        self.hideKeyboardWhenTappedAround()
+
     }
 
     override func didReceiveMemoryWarning() {
