@@ -19,6 +19,12 @@ struct Product {
         }
     }
     
+    var productId: Int{
+        get{
+            return Product.databaseId[name]!
+        }
+    }
+    
     init(productName: String) {
         self.name = productName
         
@@ -62,4 +68,24 @@ struct Product {
                      "Rote": 2.8,
                      "🥨": 1.0,
                      "🥤": -1.0]
+    
+    public static var databaseId = ["Bier": 1,
+                                      "Radler": 2,
+                                      "Cola": 8,
+                                      "Fanta": 9,
+                                      "Sprite": 11,
+                                      "Wasser": 12,
+                                      "Mezzo": 10,
+                                      "Apfel": 13,
+                                      "Glueh": 0,
+                                      "Kaffee": 6,
+                                      "Tee": 7,
+                                      "Wein": 4,
+                                      "Sauer": 3,
+                                      "Kaese": 15,
+                                      "Merquez": 16,
+                                      "Schorle": 5,
+                                      "Rote": 14,
+                                      "🥨": 18,
+                                      "🥤": 17]
 }

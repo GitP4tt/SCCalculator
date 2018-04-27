@@ -11,6 +11,7 @@ import Foundation
 class Matchday {
     
     private(set) var orderList = Array<Order>()
+    let matchDayId = UUID().uuidString
     
     
     var umsatz: Double {

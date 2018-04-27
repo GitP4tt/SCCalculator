@@ -12,6 +12,7 @@ class Order: Comparable{
     
     private(set) var orderTotal = 0.0
     private(set) var positions = Array<Position>()
+    let orderId = UUID().uuidString
     
     
     func add(new position: Position){

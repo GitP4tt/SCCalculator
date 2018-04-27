@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     
     var multiplier = 1
     var resultDisplayed = false ;
-  
+    var dbController = DatabaseController()
+    
     
    
     @IBOutlet weak var menuButton: UIButton!
@@ -24,9 +25,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-            updateViewFromModel()
-       
+        showStatistics(AnyClass.self)
     }
    
     
@@ -69,6 +68,8 @@ class ViewController: UIViewController {
         
         if (ModelController.currentOrder.positions.count > 0){
             ModelController.matchday.add(new: ModelController.currentOrder)
+            dbController.upload(order: ModelController.currentOrder)
+            
         }
         ModelController.currentOrder = Order()
         updateViewFromModel()

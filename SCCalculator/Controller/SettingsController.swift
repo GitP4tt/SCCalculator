@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsController: UIViewController {
     
+    static var registerId = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
