@@ -25,7 +25,12 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showStatistics(AnyClass.self)
+        
+        if ModelController.currentOrder.positions.count > 0 {
+            updateViewFromModel()
+        }else{
+            showStatistics(AnyClass.self)
+        }
     }
    
     
@@ -59,7 +64,7 @@ class ViewController: UIViewController {
     @IBAction func showStatistics(_ sender: Any) {
         resultDisplayed = true
         resetUI()
-        calculatorLabel.text = String(ModelController.matchday.umsatz)
+        calculatorLabel.text = String(ModelController.matchday.revenue)
         orderLabel.text = String(ModelController.matchday.getStatistics())
     }
     

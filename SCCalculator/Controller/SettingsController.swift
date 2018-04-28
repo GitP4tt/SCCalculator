@@ -10,9 +10,9 @@ import UIKit
 
 class SettingsController: UIViewController {
     
-    static var registerId = 1
-    static var cashierName: String!
-    static var opponent: String!
+    static var registerId = ""
+    static var cashierName = ""
+    static var opponent = ""
     
     @IBOutlet weak var cashierName: UITextField!
     @IBOutlet weak var registerId: UITextField!
@@ -28,7 +28,9 @@ class SettingsController: UIViewController {
         if (!markEmptyTextfield()){
             showAlert()
         }else{
-            
+            SettingsController.cashierName =  cashierName.text!
+            SettingsController.registerId = registerId.text!
+            SettingsController.opponent = opponent.text!
         }
     }
     
