@@ -14,14 +14,14 @@ class ViewController: UIViewController {
     var resultDisplayed = false ;
     var dbController = DatabaseController()
     
-    
-   
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var calculatorLabel: UILabel!
     @IBOutlet weak var orderLabel: UITextView!
     @IBOutlet weak var mulitplierView: UIStackView!
     
 
+// Superclass methods
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,8 +32,28 @@ class ViewController: UIViewController {
             showStatistics(AnyClass.self)
         }
     }
-   
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        self.hideKeyboardWhenTappedAround()
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    
+//   Actions
+    
+   
     @IBAction func buttonClicked(_ sender: UIButton) {
         
         if resultDisplayed {
@@ -42,7 +62,7 @@ class ViewController: UIViewController {
         }
         
         
-        let newProduct = Product(productName: sender.currentTitle!)
+        let newProduct = Product(name: sender.currentTitle!)
         let position = Position(product: newProduct, multiplier: multiplier)
         
         ModelController.currentOrder.add(new: position)
@@ -68,19 +88,6 @@ class ViewController: UIViewController {
         orderLabel.text = String(ModelController.matchday.getStatistics())
     }
     
-    func resetUI() {
-        mulitplierView.isUserInteractionEnabled = true
-        
-        if (ModelController.currentOrder.positions.count > 0){
-            ModelController.matchday.add(new: ModelController.currentOrder)
-            dbController.upload(order: ModelController.currentOrder)
-            
-        }
-        ModelController.currentOrder = Order()
-        updateViewFromModel()
-
-    }
-    
     @IBAction func reset(_ sender: Any) {
         resetUI()
     }
@@ -95,22 +102,20 @@ class ViewController: UIViewController {
         mulitplierView.isUserInteractionEnabled = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if self.revealViewController() != nil {
-            menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+    func resetUI() {
+        mulitplierView.isUserInteractionEnabled = true
+        
+        if (ModelController.currentOrder.positions.count > 0){
+            ModelController.matchday.add(new: ModelController.currentOrder)
+            dbController.upload(order: ModelController.currentOrder)
             
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        self.hideKeyboardWhenTappedAround()
+        ModelController.currentOrder = Order()
+        updateViewFromModel()
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+   
 
     func updateViewFromModel() {
        

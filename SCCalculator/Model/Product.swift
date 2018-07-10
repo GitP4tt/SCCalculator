@@ -25,8 +25,8 @@ struct Product {
         }
     }
     
-    init(productName: String) {
-        self.name = productName
+    init(name: String) {
+        self.name = name
         
     }
     public static var productCount = ["Bier": 0,
