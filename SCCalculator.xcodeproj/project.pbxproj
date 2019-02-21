@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC25295C20910041001054C9 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25295B20910041001054C9 /* DatabaseController.swift */; };
 		FC3B4D39205BEF6900A16248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B4D38205BEF6900A16248 /* AppDelegate.swift */; };
 		FC3B4D3B205BEF6900A16248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B4D3A205BEF6900A16248 /* ViewController.swift */; };
 		FC3B4D3E205BEF6900A16248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B4D3C205BEF6900A16248 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC25295B20910041001054C9 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		FC3B4D35205BEF6900A16248 /* SCCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B4D38205BEF6900A16248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3B4D3A205BEF6900A16248 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				FC49A8BE208E72FD009BAE85 /* OverviewController.swift */,
 				FC59253C208E8D8500AE79C7 /* SettingsController.swift */,
 				FC59253E208FA13300AE79C7 /* ModelController.swift */,
+				FC25295B20910041001054C9 /* DatabaseController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,7 +259,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Patrice.Codes;
 				TargetAttributes = {
 					FC3B4D34205BEF6900A16248 = {
@@ -332,6 +335,7 @@
 				FC59253F208FA13300AE79C7 /* ModelController.swift in Sources */,
 				FC73453C206C42B000C7E1BC /* Order.swift in Sources */,
 				FC73453A206C427800C7E1BC /* Matchday.swift in Sources */,
+				FC25295C20910041001054C9 /* DatabaseController.swift in Sources */,
 				FC3B4D3B205BEF6900A16248 /* ViewController.swift in Sources */,
 				FC59253B208E892400AE79C7 /* SWRevealViewController.m in Sources */,
 				FC73453E206C450500C7E1BC /* Position.swift in Sources */,
@@ -406,6 +410,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -413,6 +418,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -463,6 +469,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -470,6 +477,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

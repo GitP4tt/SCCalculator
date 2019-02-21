@@ -14,4 +14,9 @@ class ModelController {
     static var currentOrder = Order()
     
     
+    func getLastOrder() -> Order {
+        return ModelController.matchday.getLetzteBestellung()
+    }
+    
+    
 }

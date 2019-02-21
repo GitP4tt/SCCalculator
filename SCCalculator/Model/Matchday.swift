@@ -11,9 +11,10 @@ import Foundation
 class Matchday {
     
     private(set) var orderList = Array<Order>()
+    let matchDayId = UUID().uuidString
     
     
-    var umsatz: Double {
+    var revenue: Double {
         get{
             var revenue: Double = 0.0
             for order in orderList {
@@ -24,7 +25,7 @@ class Matchday {
     }
     
     
-    private var maxOrderValue: Double?{
+    var maxOrderValue: Double?{
         
         get{
             orderList.sort()
@@ -32,7 +33,7 @@ class Matchday {
         }
     }
     
-    private var averageOrderValue: Double?{
+    var averageOrderValue: Double?{
         get{
             var sum = 0.0;
 
@@ -43,7 +44,7 @@ class Matchday {
         }
     }
     
-    private var bestSeller: (key: String, value: Int){
+    public var bestSeller: (key: String, value: Int){
         get{
             return Product.productCount.max { a, b in a.value < b.value }!
         }
@@ -59,13 +60,14 @@ class Matchday {
     
     func getStatistics() -> String {
 
+        let cashier = "Kassierer / In: " + SettingsController.cashierName
         let orderCount = "Anzahl Bestellungen: " + String(self.orderList.count)
         let maxOrderTotal = "Max Bestellwert: " + String(self.maxOrderValue!)
         let averageOrderTotal = "Ø Bestellwert: " + String(self.averageOrderValue!)
         let bestSeller = "Best Seller: " + self.bestSeller.key + " (x" + String(self.bestSeller.value) + ")"
         
         
-        let output = orderCount + "\n" + maxOrderTotal + "\n" + averageOrderTotal + "\n" + bestSeller
+        let output = cashier + "\n"  + orderCount + "\n" + maxOrderTotal + "\n" + averageOrderTotal + "\n" + bestSeller
         
         
         return output
