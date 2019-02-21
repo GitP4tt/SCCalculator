@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     var resultDisplayed = false ;
     var dbController = DatabaseController()
     
-    @IBOutlet weak var menuButton: UIButton!
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     @IBOutlet weak var calculatorLabel: UILabel!
     @IBOutlet weak var orderLabel: UITextView!
     @IBOutlet weak var mulitplierView: UIStackView!
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if self.revealViewController() != nil {
-            menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
