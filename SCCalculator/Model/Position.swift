@@ -17,13 +17,9 @@ class Position {
  
     var positionValue: Double {
         get{
-            return (product!.preis * Double(multiplier))
+            return Double(round((product!.preis * Double(multiplier))*100)/100)
         }
     }
-    
-    
-    
-    
     
     init(product: Product,multiplier: Int ) {
         self.product = product

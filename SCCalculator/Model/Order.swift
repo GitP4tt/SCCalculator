@@ -17,13 +17,13 @@ class Order: Comparable{
     
     func add(new position: Position){
         positions.append(position)
-        orderTotal += position.positionValue
+        orderTotal = round((orderTotal + position.positionValue) * 100) / 100
     }
     
     func deleteLast(){
         
         let lastPosition = positions.popLast()!
-        orderTotal -= lastPosition.positionValue
+        orderTotal =  round((orderTotal - lastPosition.positionValue) * 100) / 100
         
             if(positions.count == 0) {
                 orderTotal = 0
