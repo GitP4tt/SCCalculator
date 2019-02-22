@@ -133,3 +133,18 @@ class ViewController: UIViewController {
   
 }
 
+extension String {
+    func lowercaseFirstLetter() -> String {
+        return prefix(1).lowercased() + self.lowercased().dropFirst()
+    }
+    func capitalizeFirstLetter() -> String {
+        return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+    
+    mutating func lowercaseFirstLetter() {
+        self = self.lowercaseFirstLetter()
+    }
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizeFirstLetter()
+    }
+}
