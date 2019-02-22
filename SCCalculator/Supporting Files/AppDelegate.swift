@@ -35,10 +35,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if(SettingsController.cashierName == ""){
+            presentOnboardingDialog()
+        }else{
+            print(SettingsController.cashierName + "is back!")
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func presentOnboardingDialog() {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Gebe deinen Namen und den heutigen Gegner an!", message: "Enter a text", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Name"
+        })
+        
+        alert.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Gegner"
+        })
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Speichern", style: .default, handler: { [weak alert] (action) -> Void in
+            let name = alert?.textFields![0].text!
+            let opponent = alert?.textFields![1].text!
+            
+            if (name!.isEmpty) {
+                self.presentOnboardingDialog()
+            } else {
+                SettingsController.cashierName = name!
+                SettingsController.opponent = opponent!
+            }
+        
+        }))
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+
+        // 4. Present the alert.
     }
 
 

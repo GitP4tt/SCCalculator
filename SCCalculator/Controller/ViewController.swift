@@ -47,12 +47,9 @@ class ViewController: UIViewController {
         }
         self.hideKeyboardWhenTappedAround()
         
+       
+        
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     
 //   Actions
     
@@ -88,7 +85,7 @@ class ViewController: UIViewController {
         resultDisplayed = true
         resetUI()
         calculatorLabel.text = String(ModelController.matchday.revenue)
-        orderLabel.text = String(ModelController.matchday.getStatistics())
+        orderLabel.text = ModelController.matchday.getStatistics()
     }
     
     @IBAction func reset(_ sender: Any) {
