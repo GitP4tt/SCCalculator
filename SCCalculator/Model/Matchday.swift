@@ -20,7 +20,7 @@ class Matchday {
             for order in orderList {
                 revenue += order.orderTotal
             }
-            return revenue
+            return round(revenue*100) / 100
         }
     }
     
