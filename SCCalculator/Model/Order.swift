@@ -42,7 +42,7 @@ class Order: Comparable{
     }
     
     static func == (lhs: Order, rhs: Order) -> Bool {
-        if (lhs == rhs) {return true}
+        if (lhs.orderId == rhs.orderId) {return true}
         else            {return false}
     }
 }
