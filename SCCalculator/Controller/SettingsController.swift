@@ -66,7 +66,7 @@ class SettingsController: UIViewController {
     }
     
     fileprivate func showAlert() {
-        let alert = UIAlertController(title: "Fehler", message: "Bitte markierte Felder ausfüllen!", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Fehler", message: "Bitte markierte Felder ausfüllen!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
             case .default:
