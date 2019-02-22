@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var resultDisplayed = false ;
     var dbController = DatabaseController()
     
+    @IBOutlet var drinksWithDifferentSizes: [UIButton]!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -118,7 +119,19 @@ class ViewController: UIViewController {
     }
     
    
-
+    @IBAction func switchPrices(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        for drink in self.drinksWithDifferentSizes {
+            if(sender.isSelected){
+                drink.setTitle(drink.currentTitle!.lowercaseFirstLetter(), for:UIControl.State.normal)
+            }else{
+                drink.setTitle(drink.currentTitle!.capitalizeFirstLetter(), for:UIControl.State.normal)
+            }
+        }
+        
+    }
+    
+    
     func updateViewFromModel() {
        
         var newLabelText: String = ""

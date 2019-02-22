@@ -362,11 +362,11 @@
                                                 <rect key="frame" x="124.5" y="0.0" width="60" height="81.5"/>
                                                 <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="⬇">
+                                                <state key="normal" title="Klein">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="deleteLastPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vD8-9P-e42"/>
+                                                    <action selector="switchPrices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfB-Ev-ppt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEf-3s-J2E">
@@ -425,6 +425,16 @@
                         <outlet property="menuButton" destination="ek2-cT-hSJ" id="oTM-WH-f2G"/>
                         <outlet property="mulitplierView" destination="sPf-d2-6oW" id="XnF-QP-9wH"/>
                         <outlet property="orderLabel" destination="lrg-s7-XzJ" id="Erz-l6-1GF"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="o2x-u0-aEd" collectionClass="NSMutableArray" id="kfP-jg-Ewb"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="eLk-Ex-M8T" collectionClass="NSMutableArray" id="CIw-pb-Oza"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="VTq-oM-b6Q" collectionClass="NSMutableArray" id="Drz-qv-wDN"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="PEK-qD-wvc" collectionClass="NSMutableArray" id="qg3-dz-APA"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="eLk-Ex-M8T" collectionClass="NSMutableArray" id="vTW-BY-pyd"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="DxA-ep-q5b" collectionClass="NSMutableArray" id="Od0-cy-F5w"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="wLL-m3-yQQ" collectionClass="NSMutableArray" id="zhr-Fp-2GL"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="1V8-Wb-1eu" collectionClass="NSMutableArray" id="dB0-Vt-bZ4"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="eLk-Ex-M8T" collectionClass="NSMutableArray" id="W6J-Aq-VYZ"/>
+                        <outletCollection property="drinksWithDifferentSizes" destination="tCa-Xc-7Ts" collectionClass="NSMutableArray" id="N10-z6-9aG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
