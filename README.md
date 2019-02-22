@@ -12,7 +12,7 @@ It's designed to help kiosk-cashier's  @schwarzwald-stadion in Freiburg im Breis
 **Let Sc Calculator do the math** so that you can focus on 🍻
 
 
-![alt text](https://imgur.com/fni2UdX.jpg "Calculation scenario")  ------  ![alt text](https://imgur.com/YmlekZr "Statistics scenario")
+![alt text](https://imgur.com/fni2UdX.jpg "Calculation scenario")  ------  ![alt text](https://imgur.com/YmlekZr.jpg "Statistics scenario")
 
 
 
